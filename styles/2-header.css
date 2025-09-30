@@ -2,7 +2,7 @@
   display: flex;
   position: sticky;
 
-  /* 스크롤업되는 콘텐츠 위로 올라오도록 */
+  /* 헤더가 스크롤업되는 콘텐츠 위로 올라오도록 */
   z-index: 2;
 
   /* 포지션 스티키일때는 무조건 탑 0 */
@@ -86,12 +86,54 @@ ul {
 
 @media (max-width: 768px) {
   .header__menu-btn {
-    display: inline-block;
+    /* display: inline-block; */
+
+    /* 체크박스 설정 초기화 */
+    all: unset;
+
+    /* 체크박스 속성 수동 설정 */
+    display: block;
+    position: relative;
+    width: var(--height-toolbar);
+    height: var(--height-toolbar);
+    background-image: url(../images/menu-button.svg);
+    background-size: 50%;
+    /* 이미지 한번만 나오게 노리핏 */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .header__menu-btn:checked {
+    background-color: var(--color-dark);
   }
 
   .header__nav {
     display: none;
   }
+
+  .header__menu-btn:checked + .header__nav {
+    display: inherit;
+    position: absolute;
+    top: var(--height-toolbar);
+    right: 0;
+    background-color: var(--color-dark);
+    padding-bottom: 1em;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav__contents {
+    width: 100vw;
+    text-align: center;
+  }
+
+  .nav__contents a {
+    width: 100vw;
+  }
+
+  .nav__contents:not(:last-child) {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.06);
+  }
+
 }
 
 @media (min-width: 769px) {
