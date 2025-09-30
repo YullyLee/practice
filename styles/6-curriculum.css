@@ -1,5 +1,16 @@
+#curriculum {
+  background-color: var(--color-dark);
+}
+
+#title__curriculum {
+  color: white;
+}
+
 @media (max-width: 768px) {
 }
 
 @media (min-width: 769px) {
+  #curriculum {
+    grid-column: 1 / -1;
+  }
 }

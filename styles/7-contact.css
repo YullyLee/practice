@@ -1,5 +1,12 @@
+#contact {
+  background-color: var(--color-light-bg);
+}
+
 @media (max-width: 768px) {
 }
 
 @media (min-width: 769px) {
+  #contact {
+    grid-column: 1 / -1;
+  }
 }
