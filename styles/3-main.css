@@ -1,2 +1,31 @@
+.section {
+  padding: 64px 16px;
+  text-align: center;
+}
+
+/* main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+} */
+
+.section__strong {
+  /* display: inline-block; */
+  font-size: var(--font-size-tag);
+  color: var(--color-sub);
+}
+
+.section__title {
+  font-size: var(--font-size-title);
+  font-weight: bold;
+  color: var(--color-text);
+  /* margin-bottom: 1em; */
+}
+
 @media (min-width: 769px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
